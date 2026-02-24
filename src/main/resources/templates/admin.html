@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background:#f9fafb;}
+        input { margin-bottom:10px; padding:8px; width:300px;}
+        button { padding:8px; background:#16a34a; color:white; border:none;}
+    </style>
+</head>
+<body>
+
+<h2>Admin Panel - Add Job</h2>
+
+<form action="/admin/add" method="post">
+    <input type="text" name="title" placeholder="Job Title" required><br>
+    <input type="text" name="company" placeholder="Company" required><br>
+    <input type="text" name="location" placeholder="Location" required><br>
+    <button>Add Job</button>
+</form>
+
+</body>
+</html>
