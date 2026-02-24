@@ -1,4 +1,3 @@
-
 package com.renuka.smartjobportal;
 
 import org.springframework.boot.SpringApplication;
