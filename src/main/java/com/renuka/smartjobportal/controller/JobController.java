@@ -19,10 +19,9 @@ public class JobController {
         this.jobRepository = jobRepository;
     }
 
-    @GetMapping("/")
-public String viewHomePage(Model model) {
-    model.addAttribute("jobs", jobRepository.findAll());
-    return "index";
+    @GetMapping("/login")
+public String loginPage() {
+    return "login";
 }
 
    @PostMapping("/apply")
