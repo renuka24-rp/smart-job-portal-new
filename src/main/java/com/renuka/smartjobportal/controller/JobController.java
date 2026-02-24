@@ -5,6 +5,7 @@ import com.renuka.smartjobportal.repository.JobRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.ui.Model;
 
 @RestController
 @RequestMapping("/api/jobs")
@@ -17,10 +18,11 @@ public class JobController {
         this.jobRepository = jobRepository;
     }
 
-    @GetMapping
-    public List<Job> getAllJobs() {
-        return jobRepository.findAll();
-    }
+    @GetMapping("/")
+public String viewHomePage(Model model) {
+    model.addAttribute("jobs", jobRepository.findAll());
+    return "index";
+}
 
     @PostMapping
     public Job createJob(@RequestBody Job job) {
