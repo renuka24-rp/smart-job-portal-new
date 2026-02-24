@@ -19,9 +19,24 @@ public class JobController {
         this.jobRepository = jobRepository;
     }
 
-    @GetMapping("/login")
-public String loginPage() {
-    return "login";
+   @GetMapping("/admin")
+public String adminPage() {
+    return "admin";
+}
+
+@PostMapping("/admin/add")
+public String addJob(@RequestParam String title,
+                     @RequestParam String company,
+                     @RequestParam String location) {
+
+    Job job = new Job();
+    job.setTitle(title);
+    job.setCompany(company);
+    job.setLocation(location);
+
+    jobRepository.save(job);
+
+    return "redirect:/";
 }
 
    @PostMapping("/apply")
