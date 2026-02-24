@@ -1,12 +1,7 @@
-package com.renuka.smartjobportal;
+package com.renuka.smartjobportal.repository;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.renuka.smartjobportal.entity.Job;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@SpringBootApplication
-public class SmartjobportalApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(SmartjobportalApplication.class, args);
-    }
+public interface JobRepository extends JpaRepository<Job, Long> {
 }
