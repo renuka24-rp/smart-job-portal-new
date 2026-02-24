@@ -5,43 +5,64 @@
     <meta charset="UTF-8">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #eef2f7;
             margin: 0;
-            padding: 0;
         }
         header {
-            background-color: #0a66c2;
+            background-color: #1f2937;
             color: white;
             padding: 15px 30px;
-            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
         }
         .container {
-            padding: 30px;
+            padding: 40px;
         }
         .card {
             background: white;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         .title {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
         }
         .company {
-            color: #555;
+            color: #4b5563;
         }
         .location {
-            color: #888;
+            color: #6b7280;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .apply-btn {
+            background-color: #2563eb;
+            color: white;
         }
     </style>
 </head>
 <body>
 
 <header>
-    Smart Job Portal – Corporate Dashboard
+    <div>Smart Job Portal</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/admin">Admin</a>
+    </div>
 </header>
 
 <div class="container">
@@ -49,6 +70,11 @@
         <div class="title" th:text="${job.title}"></div>
         <div class="company" th:text="${job.company}"></div>
         <div class="location" th:text="${job.location}"></div>
+
+        <form th:action="@{/apply}" method="post">
+            <input type="hidden" name="jobId" th:value="${job.id}" />
+            <button class="btn apply-btn">Apply Now</button>
+        </form>
     </div>
 </div>
 
