@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Smart Job Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h3>Login</h3>
+    <form action="/login" method="post">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+    </form>
+</div>
+
+</body>
+</html>
