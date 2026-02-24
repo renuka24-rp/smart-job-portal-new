@@ -3,6 +3,7 @@ package com.renuka.smartjobportal.controller;
 import com.renuka.smartjobportal.entity.Job;
 import com.renuka.smartjobportal.repository.JobRepository;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import org.springframework.ui.Model;
@@ -24,8 +25,9 @@ public String viewHomePage(Model model) {
     return "index";
 }
 
-    @PostMapping
-    public Job createJob(@RequestBody Job job) {
-        return jobRepository.save(job);
-    }
+   @PostMapping("/apply")
+public String applyJob(@RequestParam Long jobId) {
+    System.out.println("Applied for job ID: " + jobId);
+    return "redirect:/?success";
+}
 }
