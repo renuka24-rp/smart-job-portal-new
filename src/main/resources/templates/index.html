@@ -63,6 +63,22 @@
             cursor: pointer;
         }
 
+        .secondary-btn {
+    background: transparent;
+    border: 2px solid #3b82f6;
+    padding: 12px 28px;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: #3b82f6;
+}
+
         .hero button:hover {
             background: #2563eb;
         }
@@ -120,6 +136,12 @@
     </style>
 </head>
 
+    <script>
+function goToCourses() {
+    window.location.href = "https://student-course-management-tp4v.onrender.com/";
+}
+</script>
+
 <body>
 
 <!-- Navbar -->
@@ -136,8 +158,14 @@
 <div class="hero">
     <h1>Build Your Career With Us</h1>
     <p>Discover opportunities that match your ambition.</p>
+
     <button onclick="document.getElementById('jobs-section').scrollIntoView()">
         Explore Jobs
+    </button>
+
+    <!-- NEW BUTTON -->
+    <button class="secondary-btn" onclick="goToCourses()">
+        Explore Student Course System
     </button>
 </div>
 
