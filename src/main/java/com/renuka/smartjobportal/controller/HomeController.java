@@ -23,10 +23,9 @@ public class HomeController {
         List<Job> jobs = jobRepository.findAll();
 
         if (jobs.isEmpty()) {
-            jobRepository.save(new Job(null,"Software Engineer","Accenture","Pune"));
-            jobRepository.save(new Job(null,"Java Developer","TCS","Mumbai"));
-            jobRepository.save(new Job(null,"Backend Developer","Infosys","Bangalore"));
-
+            jobRepository.save(new Job("Software Engineer","Accenture","Pune"));
+            jobRepository.save(new Job("Java Developer","TCS","Mumbai"));
+            jobRepository.save(new Job("Backend Developer","Infosys","Bangalore"));
             jobs = jobRepository.findAll();
         }
 
