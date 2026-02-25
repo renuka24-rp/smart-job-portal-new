@@ -44,5 +44,3 @@ Render (Web Service)
 
 🔗 Student Course Management (Linked Project)
 👉 https://student-course-management-frontend.onrender.com/
-
-🏗
