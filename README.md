@@ -1,44 +1,48 @@
-# 🚀 Smart Job Portal
+SmartHire – Job Portal System
 
-A full-stack Job Portal application built using **Spring Boot (Backend)** and **React.js (Frontend)**.  
-This project demonstrates REST API integration, database management, and cloud deployment using Render.
+SmartHire is a modern job portal web application that allows candidates to explore job opportunities and apply seamlessly.
 
----
+This project demonstrates a clean UI, dynamic job rendering, and modular project linking.
 
-## 📌 Features
+🚀 Features
 
-- 👨‍💼 Admin can add new job postings
-- 👀 Users can view available jobs
-- 📝 Users can apply for jobs
-- 🔗 REST API integration between frontend and backend
-- ☁️ Fully deployed on cloud (Render)
+Browse job listings
 
----
+Apply for positions
 
-## 🛠 Tech Stack
+Responsive corporate UI
 
-### Backend
-- Java
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- MySQL
+Smooth navigation experience
 
-### Frontend
-- React.js
-- HTML
-- CSS
-- JavaScript
+Modular architecture linking to another deployed project
 
-### Deployment
-- Render (Cloud Deployment Platform)
+🛠 Tech Stack
+Backend
 
----
+Spring Boot
 
-## 🚀 Live Application
+Thymeleaf
 
-🔗 **Access the deployed application here:**  
-https://smart-job-portal-new.onrender.com/
+Java
 
-> ✅ The complete application is deployed on Render.  
-> No local setup is required to access the live project
+Frontend
+
+HTML
+
+CSS
+
+JavaScript
+
+Deployment
+
+Render (Web Service)
+
+🌐 Live Demo
+
+🔗 SmartHire Job Portal
+👉 https://smart-job-portal-new.onrender.com/
+
+🔗 Student Course Management (Linked Project)
+👉 https://student-course-management-frontend.onrender.com/
+
+🏗
